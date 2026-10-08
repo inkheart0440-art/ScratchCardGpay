@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save Our Date</title>
+    <title>Mommy Daddy &amp; Ren Ren</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
-    <div class="invitation-container">
-        <!-- Inside details revealed under the scratch layer -->
-        <div class="revealed-content">
-            <p class="wedding-title">SAVE THE DATE</p>
-            <div class="image-frame">
-                <img id="wedding-photo" src="winning-card.jpg" alt="Wedding Portrait">
+    <!-- 1. ENVELOPE SCREEN -->
+    <div class="envelope-wrapper" id="envelope-screen">
+        <div class="envelope" id="main-envelope">
+            <div class="flap"></div>
+            <div class="pocket"></div>
+            <div class="letter-preview">
+                <p>Hello<br>✨</p>
             </div>
-            <h1 class="couple-names">Oliver &amp; Emma</h1>
-            <p class="wedding-date">10 . 24 . 2027</p>
-            <p class="wedding-location">LOS ANGELES, CALIFORNIA</p>
-            <p class="sub-text">Invitation to follow</p>
         </div>
-        
-        <!-- Interactive scratch layer -->
+        <button class="open-btn" onclick="openEnvelope()">TAP TO OPEN</button>
+    </div>
+
+    <!-- 2. SCRATCH CARD CONTAINER -->
+    <div class="invitation-container hide" id="card-screen">
+        <div class="revealed-content">
+            <div class="image-frame">
+                <img id="wedding-photo" src="winning-card.jpg" alt="Family Portrait">
+            </div>
+            <h1 class="couple-names">Mommy Daddy &amp; Ren Ren</h1>
+        </div>
         <canvas id="scratch-canvas"></canvas>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
