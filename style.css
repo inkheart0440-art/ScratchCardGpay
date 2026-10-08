@@ -1,32 +1,108 @@
-body{
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #444;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fcfbfa;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    user-select: none;
-
-}
-#scratch{
-    position: relative;
-    width: 370px;
-    height: 370px;
-    aspect-ratio: square;
-    border: 2px solid #ffffff;
-    box-shadow:  0 5px 15px rgba(255, 251, 251, 0.3);
-    background-color:  #ecf0f1;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
     overflow: hidden;
-    border-radius: 15px;
-    
 }
-#scratch img{
+
+.invitation-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 450px;
+    max-height: 850px;
+    background: #f4ece1; /* Cream base color */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.revealed-content {
+    width: 100%;
+    height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: #4a443c;
+    background: #fdfbf7;
+    z-index: 1;
+}
+
+.wedding-title {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+/* Elegant oval picture frame from the video */
+.image-frame {
+    width: 220px;
+    height: 300px;
+    border-radius: 150px; 
+    border: 1px solid #dfd5c6;
+    padding: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#wedding-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 150px;
 }
-#scratch canvas{
+
+.couple-names {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    font-size: 32px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.wedding-date {
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+.wedding-location {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8c8275;
+}
+
+.sub-text {
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #a69c8f;
+    margin-bottom: 20px;
+}
+
+#scratch-canvas {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+    touch-action: none;
 }
